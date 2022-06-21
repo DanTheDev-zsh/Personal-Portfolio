@@ -1,0 +1,90 @@
+.text-white-nav {
+    color: white !important;
+}
+
+.blur-background-navbar{
+    backdrop-filter: blur(2px) contrast(.8); 
+    padding-top: 0px;           
+}
+
+.display-flex-and-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.display-flex-and-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-collapse {
+    flex-basis:100%;
+    flex-grow:1;
+    align-items:center;
+}
+
+.fas {
+    color:white;
+}
+
+.nav-link-color {
+    color: #12ccf1;
+}
+
+#styled-img {
+    border-radius: 20px;
+    box-shadow: black 0 0 10px;
+    max-width: 515px;
+    max-height: 762px;
+}
+
+/* 600x882 */
+@media (max-width: 1111px){
+    img.responsive-img-sizing  {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ultra-wide display limit on text */
+@media (max-width: 2000px) {
+    .container {
+        max-width: 1300px
+    } 
+}
+
+/* desktop large screen limit on text */
+@media (max-width: 1401px) {
+    .container {
+        max-width: 1025px
+    } 
+}
+
+/* Small screens, laptops screen limit on text */
+@media (max-width: 1111px) {
+    .container {
+        max-width: 869px;
+    } 
+}
+
+/* tablet screen limit on text */
+@media (max-width: 950px) {
+    .container {
+        max-width: 581px;
+    } 
+}
+
+/* mobile device limit on text */
+@media (max-width: 700px) {
+    .responsive-img-sizing {
+        max-width: 390px;
+    } 
+}
+
+/* Small screens, laptops screen limit on image */
+@media (max-width: 1111px){
+    img.responsive-img-sizing  {
+        max-width: 100%;
+        height: auto;
+    }
+}
