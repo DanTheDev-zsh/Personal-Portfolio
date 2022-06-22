@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Material Design for Bootstrap</title>
+    <title>My Portfolio</title>
     <!-- MDB icon -->
     <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Google Fonts Roboto -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- My own CSS I wrote -->
     <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 
 <body>
@@ -27,10 +28,10 @@
     <header>
         <!-- Animated navbar-->
         <nav class="navbar navbar-expand-lg fixed-top navbar-scroll blur-background-navbar">
-            <div class="container-fluid">
+            <div class="container-fluid"> <!-- inheriting navbar -->
                 <!-- .container-fluid is bootstrap's width 100% at all media query screensize -->
-                <button class="navbar-toggler ps-0 collapsed" type="button" data-mdb-toggle="collapse"
-                    data-mdb-target="#collapsable-navbar-id-1" style="padding-top: 13px; ">
+                <button class="navbar-toggler ps-0 collapsed" type="button" data-toggle="collapse"
+                    data-target="#collapsable-navbar-id-1" style="padding-top: 13px; "> <!--data-mdb-toggle and target -->
                     <!-- Create a Bootstrap collapsable navbar with mdBootstrap-->
                     <span class="navbar-toggler-icon display-flex-and-start align-items-center">
                         <i class="fas fa-bars"></i> <!-- this bars icon is imported from fontawesome.com -->
@@ -58,18 +59,18 @@
                         <li class="nav-item">
                             <a class="nav-link px-2" href="https://www.facebook.com/dangthemshells" rel="nofollow"
                                 target="_blank">
-                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-facebook-f"></i> <!-- icon from fontawesome.com -->
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ps-2" href="https://github.com/danTheDev-zsh/" rel="nofollow"
                                 target="_blank">
-                                <i class="fab fa-github"></i>
+                                <i class="fab fa-github"></i> <!-- icon from fontawesome.com -->
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link ps-2" href="#cbutton-href">
-                                <i class="fa-brands fa-discord"></i>
+                                <i class="fa-brands fa-discord"></i> <!-- icon from fontawesome.com -->
                             </a>
                         </li>
                     </ul>
@@ -123,10 +124,22 @@
         <!--  Collapse button -->
     
         <div>
-            <!-- <a class="btn btn-primary" data-toggle="collapse" href="#collapseBtn" onclick="getDiscordTag()">
+            <!-- !retired because getDiscordTag uses alert -->
+            <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBtn" onclick="getDiscordTag()" id="cbutton-href">
                 Copy &amp Show Discord Tag
-            </a> -->
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBtn" onclick="getDiscordTag()" id="cbutton-href">
+            </button> -->
+            <!-- data-toggle="collapse"
+                   class="btn btn-primary"
+              type="button"
+            data-target="#collapseBtn" -->
+            <button
+            data-toggle="collapse"
+            class="btn btn-primary"
+            type="button"
+            data-clipboard-text="Danyo#8139"
+            data-content="Copied Discord Tag"
+            data-target="#collapseBtn" 
+            id="cbutton-href">
                 Copy &amp Show Discord Tag
             </button>
         </div>
@@ -143,11 +156,19 @@
     <!-- End your project here-->
 
     <!-- MDB and other used API-->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"> -->
+    
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <!-- Custom scripts -->
     <script type="text/javascript" src="js/scripts.js"></script>
     
