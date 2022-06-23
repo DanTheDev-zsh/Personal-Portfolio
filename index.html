@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/mdb.min.css" />
     <!-- My own CSS I wrote -->
     <link rel="stylesheet" href="css/styles.css" />
-
 </head>
 
 <body>
@@ -86,12 +85,10 @@
                 ">
             <div class="mask text-white" style="background-color: rgba(0, 0, 0, 0.8)">
                 <div class="container display-flex-and-center text-center h-100">
-                    <div>
+                    <div class="front-flex-middle">
                         <h1 class="mb-5">Hello, I'm Daniel</h1>
-                        <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis molestiae
-                            laboriosam numquam expedita ullam saepe ipsam, deserunt provident corporis,
-                            sit non accusamus maxime, magni nulla quasi iste ipsa architecto? Autem!
+                        <p id="short-description">
+                            SOFTWARE ENGINEER & WEB DEVELOPER
                         </p>
                     </div>
                 </div>
@@ -101,37 +98,59 @@
     </header>
     <!--Main Navigation-->
 
-    <div id="about-me" class="container my-5">
-        <h2 class="nav-link-color"> About Me</h2>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
+    <div id="about-me" class="container my-5 top-padding-space">
+        <h2 class="nav-link-color text-center"> About Me</h2>
+        <p class="container my-5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
             Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi,
             ex architecto.</p>
     </div>
 
-    <div id="projects" class="container my-5">
-        <h2 class="nav-link-color"> Projects</h2>
-        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
+    <div id="projects" class="container my-5 top-padding-space div-light">
+        <h2 class="nav-link-color text-center"> Projects</h2>
+        <p class="container my-5"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quam minima perspiciatis eos tenetur.
             Praesentium dolores at quos aperiam sed, sint provident consectetur incidunt, nostrum porro earum commodi,
             ex architecto.</p>
-    </div>
-    <div id="socials" class="container my-5">
-        <h2 class="nav-link-color"> Connect with Me</h2>
 
-        <p>
+        <section class="container dynamic-flex"> <!-- flex-row is mdb flex-direction: row -->
+            <article class="flex-block-item text-center">
+                <h4>
+                    Project 1
+                </h4>
+                <img src="img/whiteimageholder.jpg" class="fit-in-parent cool-shadows">
+
+            </article>
+            <article class="flex-block-item text-center">
+                <h4>
+                    Project 2
+                </h4>
+                <img src="img/whiteimageholder.jpg" class="fit-in-parent cool-shadows">
+
+            </article>
+            <article class="flex-block-item text-center" style="padding-bottom: 48px;">
+                <h4>
+                    Project 3
+                </h4>
+                <img src="img/whiteimageholder.jpg" class="fit-in-parent cool-shadows">
+
+            </article>
+        </section>
+
+        </section>
+    </div>
+    <div id="socials" class="container my-5 top-padding-space">
+        <h2 class="nav-link-color text-center"> Connect with Me</h2>
+        <p class="container my-5">
             I'm always active on Discord, come chat with me! Click on the button below to copy and see my Discord tag.
         </p>
 
         <!--  Collapse button -->
     
         <div>
-            <!-- !retired because getDiscordTag uses alert -->
+            <!-- ! retired because getDiscordTag uses alert -->
             <!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBtn" onclick="getDiscordTag()" id="cbutton-href">
                 Copy &amp Show Discord Tag
             </button> -->
-            <!-- data-toggle="collapse"
-                   class="btn btn-primary"
-              type="button"
-            data-target="#collapseBtn" -->
+
             <button
             data-toggle="collapse"
             class="btn btn-primary"
@@ -141,7 +160,7 @@
             data-target="#collapseBtn" 
             id="cbutton-href">
                 Copy &amp Show Discord Tag
-            </button>
+            </button> <!-- this button calls bootstrap's collapsible button toggle, and the show popover tooltip from scripts.js (self coded)-->
         </div>
 
         <!-- Collapsible element -->
@@ -157,15 +176,14 @@
 
     <!-- MDB and other used API-->
     <!-- <script type="text/javascript" src="js/mdb.min.js"></script> -->
+    <!-- jqueryui broken  -->
     <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <!-- <script src="jquery-3.6.0.min.js"></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
     <!-- <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"> -->
     
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
